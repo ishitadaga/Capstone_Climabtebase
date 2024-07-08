@@ -49,10 +49,3 @@ def scraper_ceqa():
         driver.implicitly_wait(10)
         response = requests.get(file.get_attribute("href"), stream=True)
         out = pd.concat([out, pd.read_csv(io.StringIO(response.content.decode('unicode_escape')))])
-
-
-        
-
-
-   
-
